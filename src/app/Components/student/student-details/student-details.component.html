@@ -1,0 +1,77 @@
+<div>
+  <h3 class="display-6 text-center">Les details de l'élèves N° <i>{{student.id }}</i> </h3>
+  <div class="row mt-4">
+    <div class="col-4">
+      <p class="ms-4">Prénom de l'élève:</p>
+    </div>
+    <div class="col-7 ">
+      <h6  class="text-center">{{student.firstName | uppercase}}</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <p class="ms-4">Nom de l'élève:</p>
+    </div>
+    <div class="col-7 ">
+      <h6  class="text-center">{{student.lastName | uppercase}}</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <p class="ms-4">Date de naissance:</p>
+    </div>
+    <div class="col-7 ">
+      <h6  class="text-center">{{student.dateOfBirth }}</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <p class="ms-4">Sexe:</p>
+    </div>
+    <div class="col-7 ">
+      <h6  class="text-center">{{student.gender | uppercase}}</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <p class="ms-4">Adresse de l'élève:</p>
+    </div>
+    <div class="col-7 ">
+      <h6  class="text-center">{{student.address | uppercase}}</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <p class="ms-4">Prénom du tuteur(trice):</p>
+    </div>
+    <div class="col-7 ">
+      <h6  class="text-center">{{student.parentFirstName | uppercase}}</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <p class="ms-4">Nom du tuteur(trice):</p>
+    </div>
+    <div class="col-7 ">
+      <h6  class="text-center">{{student.parentLastName | uppercase}}</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <p class="ms-4">Téléphone du tuteur(trice):</p>
+    </div>
+    <div class="col-7 ">
+      <h6  class="text-center">{{student.parentPhone | uppercase}}</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <p class="ms-4">Classe:</p>
+    </div>
+    <div class="col-7 ">
+      <h6  class="text-center">{{student.classroom.className | uppercase}}</h6>
+    </div>
+  </div>
+  <button class="btn btn-primary" (click)="goBack()">Retour</button>
+</div>
+

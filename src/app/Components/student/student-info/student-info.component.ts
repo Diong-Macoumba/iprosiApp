@@ -28,4 +28,8 @@ export class StudentInfoComponent implements OnInit {
   goToDetails(id: number) {
     this.router.navigate(['Students/details/'+id]);
   }
+
+  update(id: number) {
+    this.router.navigate(['Students/update/'+id]);
+  }
 }

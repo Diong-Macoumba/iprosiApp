@@ -1,1 +1,9 @@
-<p>update-class works!</p>
+<div class="col-5">
+  <form (ngSubmit)="OnSubmit()">
+    <div class="mt-2">
+      <label>Nom de la Classe</label>
+      <input type="text"  class="form-control"  [(ngModel)]="classroom.className" name="classe" value="{{classroom.className}}">
+    </div>
+    <button type="submit" class="btn btn-success mt-2">Save</button>
+  </form>
+</div>

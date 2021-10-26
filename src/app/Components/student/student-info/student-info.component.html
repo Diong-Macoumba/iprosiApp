@@ -12,7 +12,9 @@
           <td>{{s.lastName}}</td>
           <td>{{s.dateOfBirth}}</td>
           <td>{{s.classroom.className}}</td>
-          <td><button class="btn btn-outline-info" (click)="goToDetails(s.id)"><i class="fa fa-info-circle"></i></button></td>
+          <td><button class="btn btn-outline-info" (click)="goToDetails(s.id)"><i class="fa fa-info-circle"></i></button>
+              <button class="btn btn-outline-primary" (click)="update(s.id)"><i class="fa fa-pencil"></i> </button>
+          </td>
         </tr>
         </tbody>
       </table>

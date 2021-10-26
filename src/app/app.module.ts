@@ -13,6 +13,10 @@ import { CreateStudentComponent } from './Components/student/create-student/crea
 import {FormsModule} from "@angular/forms";
 import { StudentDetailsComponent } from './Components/student/student-details/student-details.component';
 import { UpdateClassComponent } from './Components/classroom/update-class/update-class.component';
+import { UpdateStudentComponent } from './Components/student/update-student/update-student.component';
+import { TeacherListComponent } from './Components/teacher/teacher-list/teacher-list.component';
+import { TeacherDetailComponent } from './Components/teacher/teacher-detail/teacher-detail.component';
+import { CreateTeacherComponent } from './Components/teacher/create-teacher/create-teacher.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { UpdateClassComponent } from './Components/classroom/update-class/update
     ClassListComponent,
     CreateStudentComponent,
     StudentDetailsComponent,
-    UpdateClassComponent
+    UpdateClassComponent,
+    UpdateStudentComponent,
+    TeacherListComponent,
+    TeacherDetailComponent,
+    CreateTeacherComponent
   ],
   imports: [
     BrowserModule,

@@ -17,5 +17,13 @@ export class ClassroomService {
   create(classroom: Classroom):Observable<object>{
     return this.http.post(`${this.classroomUrl}`,classroom);
   }
-
+  getClassroomById(id: number):Observable<Classroom>{
+    return this.http.get<Classroom>(`${this.classroomUrl}/${id}`);
+  }
+  updateClassroom(id : number, classroom :Classroom):Observable<Classroom>{
+    return this.http.put<Classroom>(`${this.classroomUrl}/${id}`,classroom);
+  }
+  deleteClassroom(id : number):Observable<object>{
+    return this.http.delete(`${this.classroomUrl}/${id}`);
+  }
 }

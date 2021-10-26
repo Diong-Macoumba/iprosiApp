@@ -10,9 +10,7 @@
     <tr *ngFor="let c of classrooms">
       <td>{{c.id}}</td>
       <td>{{c.className}}</td>
-      <td><button class="btn btn-info text-white" (click)="edit(c.id)"><i class="fa fa-pencil fa-fw"></i></button>
-        <button class="btn btn-danger ms-2" (click)="delete(c.id)"><i class="fa fa-trash-o fa-fw"></i></button>
-      </td>
+      <td><button class="btn btn-info text-white" (click)="edit(c.id)"><i class="fa fa-pencil fa-fw"></i></button></td>
     </tr>
     </tbody>
   </table>

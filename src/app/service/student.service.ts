@@ -16,7 +16,8 @@ export class StudentService {
   }
   createStudent(studentDto: StudentResponseDto):Observable<object>{
     return this.http.post(`${this.studentUrl}`,studentDto);  }
-  updateStudent(studentDto : StudentResponseDto, id : number):Observable<object>{
+
+  updateStudent(studentDto: StudentResponseDto, id: number):Observable<object>{
     return this.http.put(`${this.studentUrl}/${id}`,studentDto);
   }
  getStudentById(id : number):Observable<Student>{

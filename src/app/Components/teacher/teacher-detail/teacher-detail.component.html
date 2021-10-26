@@ -1,0 +1,63 @@
+<div class="col-10 row mt-2 shadow-sm">
+    <div [ngSwitch]="teacher.gender">
+      <div *ngSwitchCase="MAN">
+        <img src="https://img.icons8.com/color/240/000000/administrator-male--v1.png" alt="Card image">
+      </div>
+      <div *ngSwitchCase="WOMAN">
+        <img  src="https://img.icons8.com/color/240/000000/administrator-female--v1.png" alt="Card image">
+      </div>
+      </div>
+  <div class="row col-12 ms-1  bg-primary bg-opacity-25">
+    <div class="col-4">
+      <h4>Prénom: </h4>
+    </div>
+    <div class=" col-6">
+      <h4 class="text-end">{{teacher.firstName}}</h4>
+    </div>
+  </div>
+
+  <div class="row col-12 ms-1 mt-2 bg-warning bg-opacity-25">
+    <div class="col-4">
+      <h4>Nom: </h4>
+    </div>
+    <div class=" col-6">
+      <h4 class="text-end">{{teacher.lastName}}</h4>
+    </div>
+  </div>
+
+  <div class="row ms-1 col-12 mt-2 bg-primary bg-opacity-25">
+    <div class="col-4">
+      <h4>Sexe: </h4>
+    </div>
+    <div class=" col-6">
+      <h4 class="text-end">{{teacher.gender}}</h4>
+    </div>
+  </div>
+
+  <div class="row ms-1 col-12 mt-2 bg-warning bg-opacity-25">
+    <div class="col-4">
+      <h4>Adresse: </h4>
+    </div>
+    <div class=" col-6">
+      <h4 class="text-end">{{teacher.address}}</h4>
+    </div>
+  </div>
+
+  <div class="row ms-1 col-12 mt-2 bg-primary bg-opacity-25">
+    <div class="col-4">
+      <h4>Email: </h4>
+    </div>
+    <div class=" col-6">
+      <h4 class="text-end">{{teacher.email}}</h4>
+    </div>
+  </div>
+
+  <div class="row col-12 ms-1 mt-2 bg-warning bg-opacity-25">
+    <div class="col-4">
+      <h4>Phone: </h4>
+    </div>
+    <div class=" col-6">
+      <h4 class="text-end">{{teacher.phone}}</h4>
+    </div>
+  </div>
+</div>

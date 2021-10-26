@@ -7,15 +7,21 @@ import {CreateStudentComponent} from "./Components/student/create-student/create
 import {CreateClassComponent} from "./Components/classroom/create-class/create-class.component";
 import {StudentDetailsComponent} from "./Components/student/student-details/student-details.component";
 import {UpdateClassComponent} from "./Components/classroom/update-class/update-class.component";
+import {UpdateStudentComponent} from "./Components/student/update-student/update-student.component";
+import {TeacherListComponent} from "./Components/teacher/teacher-list/teacher-list.component";
+import {TeacherDetailComponent} from "./Components/teacher/teacher-detail/teacher-detail.component";
 
 const routes: Routes = [
   {path:'home', component: HomeComponent},
   {path:'Students', component : StudentInfoComponent},
   {path: 'Students/Add', component: CreateStudentComponent},
   {path: 'Students/details/:id', component: StudentDetailsComponent},
+  {path: 'Students/update/:id', component : UpdateStudentComponent},
   {path: 'Classes' , component: ClassListComponent},
   {path: 'Classes/update/:id' , component: UpdateClassComponent},
   {path: 'Classes/Add', component: CreateClassComponent},
+  {path: 'Teachers', component : TeacherListComponent},
+  {path: 'Teachers/details/:id', component: TeacherDetailComponent},
   {path: '',   redirectTo: 'home', pathMatch: 'full'}
 ];
 

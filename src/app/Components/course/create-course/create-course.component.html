@@ -1,0 +1,20 @@
+<div class="form-group m-auto col-6 mt-5">
+  <form (ngSubmit)="onSubmit()">
+    <div class="p-2">
+      <input type="text" class="form-control" placeholder="Intilulé" name="title" [(ngModel)]="course.title">
+    </div>
+
+    <div class="p-2">
+      <input type="number" class="form-control" placeholder="Année" name="year" [(ngModel)]="course.year">
+    </div>
+    <div class="p-2">
+    <select class="form-select" [(ngModel)]="selectedOption" name="teacherId">
+      <option  selected>professeurs</option>
+      <option *ngFor="let t of teachers" [ngValue]="t" >{{t.firstName | uppercase}} {{t.lastName | uppercase}}</option>
+    </select>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-outline-primary">Save</button>
+    </div>
+  </form>
+</div>

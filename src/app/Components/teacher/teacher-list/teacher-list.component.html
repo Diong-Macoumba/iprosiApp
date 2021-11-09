@@ -1,0 +1,24 @@
+<div class="container">
+  <button class="btn btn-primary ms-2" (click)="AddTeacher()"><i class="fa fa-plus"></i> New Teacher</button>
+</div>
+<div  class="row ms-4 mt-4 mb-3" >
+   <div class="card ms-2 mt-2 shadow-sm border-primary" style="width:300px" *ngFor="let t of teachers" >
+     <div [ngSwitch]="t.gender">
+        <div *ngSwitchCase="MAN">
+          <img class="card-img-top" src="https://img.icons8.com/color/240/000000/administrator-male--v1.png" alt="Card image">
+        </div>
+       <div *ngSwitchCase="WOMAN">
+         <img class="card-img-top" src="https://img.icons8.com/color/240/000000/administrator-female--v1.png" alt="Card image">
+       </div>
+     </div>
+        <div class="card-body">
+          <h4 class="card-title">{{t.firstName}} {{t.lastName}}</h4>
+          <p class="card-text"><i class="fa fa-phone"></i> {{t.phone}}</p>
+          <p class="card-text"><i class="fa fa-envelope"></i> {{t.email}}</p>
+          <a (click)="detail(t.id)" class="btn btn-primary">More</a>
+          <button class="btn btn-outline-primary ms-1" (click)="update(t.id)"><i class="fa fa-pencil">edit</i></button>
+          <button class="btn btn-outline-danger ms-1" (click)="delete(t.id)"><i class="fa fa-trash-o">delete</i></button>
+        </div>
+      </div>
+  </div>
+

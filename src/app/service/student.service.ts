@@ -23,4 +23,7 @@ export class StudentService {
  getStudentById(id : number):Observable<Student>{
     return this.http.get<Student>(`${this.studentUrl}/${id}`);
  }
+ deleteStudent(id: number):Observable<object>{
+    return this.http.delete(`${this.studentUrl}/${id}`);
+ }
 }

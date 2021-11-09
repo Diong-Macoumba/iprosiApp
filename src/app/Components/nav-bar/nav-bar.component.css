@@ -1,10 +1,7 @@
 @import '~font-awesome/css/font-awesome.css';
-body {
-  background-color: #eee
-}
 
 .nav-link:hover {
-  background-color: #525252 !important
+  background-color: #f6b206 !important
 }
 
 .nav-link .fa {

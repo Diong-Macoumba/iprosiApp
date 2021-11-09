@@ -1,0 +1,41 @@
+<h3 class="display-6 text-center">Modifications</h3>
+<form (ngSubmit)="Onsubmit() ">
+  <div class="col-6">
+    <div class="mt-2">
+      <label>Prenom:</label>
+      <input type="text" class="form-control" name="first"  [(ngModel)]="student.firstName" >
+    </div>
+    <div class="mt-2">
+      <label>Nom:</label>
+      <input type="text" class="form-control"  name="last" [(ngModel)]="student.lastName">
+    </div>
+    <div class="mt-2">
+      <label>Date de naissance</label>
+      <input type="date" class="form-control" name="dateNaissance"  [(ngModel)]="student.dateOfBirth">
+    </div>
+    <div class="mt-2">
+      <label>Adresse:</label>
+      <input type="text" class="form-control" name="adress"   [(ngModel)]="student.address">
+    </div>
+    <div class="mt-2">
+      <label>Prenom du tuteur(trice):</label>
+      <input type="text" class="form-control"  name="parentfirst" [(ngModel)]="student.parentFirstName">
+    </div>
+    <div class="mt-2">
+      <label>Nom du tuteur(trice):</label>
+      <input type="text" class="form-control"  name="parentLast" [(ngModel)]="student.parentLastName">
+    </div>
+    <div class="mt-2">
+      <label>Telephone du tuteur(trice):</label>
+      <input type="text" class="form-control"  name="parentPhone" [(ngModel)]="student.parentPhone">
+    </div>
+    <div class="mt-2">
+      <label>Classe:</label>
+      <select class="form-select mt-2" [(ngModel)]="selectedOption" name="classname">
+        <option selected> selectionner la classe</option>
+        <option *ngFor="let c of classrooms" [ngValue]="c">{{c.className}}</option>
+      </select>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success mt-2">save</button>
+</form>

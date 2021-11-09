@@ -1,21 +1,20 @@
- <div class="col-9 ms-4 mt-4">
-   <button class="btn-primary btn" routerLink="Add">Add Student</button>
-      <table class="table table-striped mt-4">
-        <thead class="bg-primary text-white">
-        <tr>
-          <th>Prenom</th><th>Nom</th><th>DateNaissance</th><th>Classe</th><th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let s of students">
-          <td>{{s.firstName}}</td>
-          <td>{{s.lastName}}</td>
-          <td>{{s.dateOfBirth}}</td>
-          <td>{{s.classroom.className}}</td>
-          <td><button class="btn btn-outline-info" (click)="goToDetails(s.id)"><i class="fa fa-info-circle"></i></button>
-              <button class="btn btn-outline-primary" (click)="update(s.id)"><i class="fa fa-pencil"></i> </button>
-          </td>
-        </tr>
-        </tbody>
-      </table>
+<button class="btn ms-2 mt-2 color text-white" routerLink="Add"><i class="fa fa-plus"></i> New Student</button>
+<div  class="row ms-2 mt-4 mb-2 " >
+  <div class="card ms-2 mt-2 shadow border-primary radius" style="width:300px" *ngFor="let s of students" >
+    <div [ngSwitch]="s.gender">
+      <div *ngSwitchCase="MAN">
+        <img class="card-img-top" src="https://img.icons8.com/color/240/000000/circled-user-male-skin-type-3--v1.png"/>      </div>
+      <div *ngSwitchCase="WOMAN">
+        <img class="card-img-top" src="https://img.icons8.com/color/240/000000/circled-user-female-skin-type-3--v1.png" alt="Card image">
+      </div>
     </div>
+    <div class="card-body">
+      <h4 class="card-title">{{s.firstName}} {{s.lastName}}</h4>
+      <h5> {{s.classroom.className}}</h5>
+      <p><i class="fa fa-map-marker"></i> {{s.address}}</p>
+      <a (click)="goToDetails(s.id)" class="btn btn-primary">More</a>
+      <button class="btn btn-outline-primary ms-1" (click)="update(s.id)"><i class="fa fa-pencil">edit</i></button>
+      <button class="btn btn-outline-danger ms-1" (click)="delete(s.id)"><i class="fa fa-trash-o">delete</i></button>
+    </div>
+  </div>
+</div>

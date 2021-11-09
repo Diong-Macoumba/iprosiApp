@@ -25,7 +25,7 @@ export class CreateStudentComponent implements OnInit {
   this.getAllClass();
   }
 
-  private getAllClass() {
+  getAllClass() {
     this.classroomService.getAllClassroom().subscribe(data=>{
       this.classrooms=data;
     })

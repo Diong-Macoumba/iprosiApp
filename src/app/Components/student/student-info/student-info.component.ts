@@ -9,27 +9,38 @@ import {Router} from "@angular/router";
   styleUrls: ['./student-info.component.css']
 })
 export class StudentInfoComponent implements OnInit {
-   students!: Student[];
+  students!: Student[];
+  MAN = "MAN";
+  WOMAN = "WOMAN";
 
-  constructor(private  studentService:  StudentService,
-              private router : Router) { }
+  constructor(private studentService: StudentService,
+              private router: Router) {
+  }
 
   ngOnInit(): void {
     this.getAllStudents();
   }
 
   private getAllStudents() {
-    this.studentService.getAllStudents().subscribe(data=>{
-      this.students=data;
+    this.studentService.getAllStudents().subscribe(data => {
+      this.students = data;
       console.log(data);
     })
   }
 
   goToDetails(id: number) {
-    this.router.navigate(['Students/details/'+id]);
+    this.router.navigate(['Students/details/' + id]);
   }
 
   update(id: number) {
-    this.router.navigate(['Students/update/'+id]);
+    this.router.navigate(['Students/update/' + id]);
+  }
+
+  delete(id: number) {
+    let v = confirm('Etes-vous sur?')
+    if (v == true) {
+      this.studentService.deleteStudent(id).subscribe(() =>
+        location.reload());
+    }
   }
 }
